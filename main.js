@@ -16,14 +16,28 @@ const loginInfo = (req, res, next) => {
   if (req.body.username === 'taylorcox' && req.body.password === 'passstuff') {
     next()
   } else {
+    console.log('a')
+    res.redirect('/loginfailed')
+  }
+}
+
+const doesInfoExist = (req, res, next) => {
+  if (req.body.username && req.body.password) {
+    next()
+  } else {
+    console.log('b')
     res.redirect('/login')
   }
 }
 
+app.get('/loginfailed', (req, res) => {
+  res.render('login-failed')
+})
+
 app.get('/login', (req, res) => {
   res.render('login')
 })
-
+app.use(doesInfoExist)
 app.use(loginInfo)
 
 app.post('/', (req, res) => {
