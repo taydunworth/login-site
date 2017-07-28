@@ -13,10 +13,9 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
 const loginInfo = (req, res, next) => {
-  if (req.body.username === 'taylorcox' && req.body.password === 'passstuff') {
+  if (req.body.username === 'username' && req.body.password === 'password') {
     next()
   } else {
-    console.log('a')
     res.redirect('/loginfailed')
   }
 }
@@ -25,7 +24,6 @@ const doesInfoExist = (req, res, next) => {
   if (req.body.username && req.body.password) {
     next()
   } else {
-    console.log('b')
     res.redirect('/login')
   }
 }

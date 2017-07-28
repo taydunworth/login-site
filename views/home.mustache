@@ -2,12 +2,17 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>You're Logged In!</title>
+    <link href="/styles.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <h1>Thank you, {{username}}, for logging in!</h1>
-    <form class="" action="/" method="get">
-      <button>Logout</button>
-    </form>
+    <div class="wrapper">
+      <div class="login-box">
+        <h1>Thank you, <span class="bolder">{{username}}</span>, for logging in!</h1>
+        <form class="" action="/" method="get">
+          <button>Logout</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
