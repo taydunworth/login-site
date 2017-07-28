@@ -24,14 +24,10 @@ app.get('/login', (req, res) => {
   res.render('login')
 })
 
-app.post('/', (req, res) => {
-  res.render('home', req.body)
-})
-
 app.use(loginInfo)
 
-app.post('/logged-in', (req, res) => {
-  res.render('logged-in', req.body)
+app.post('/', (req, res) => {
+  res.render('home', req.body)
 })
 
 app.listen(3000, function() {

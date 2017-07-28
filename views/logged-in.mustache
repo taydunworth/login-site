@@ -5,9 +5,14 @@
     <title></title>
   </head>
   <body>
-    <h1>Thank you, {{username}}, for logging in!</h1>
-    <form class="" action="/" method="get">
-      <button>Logout</button>
+    <form class="" action="/" method="post">
+      <h1>Please log in below:</h1>
+      <p>Uh oh! That information isn't quite right.</p>
+      <input type="text" name="username" value="" placeholder="username">
+      <br/>
+      <input type="password" name="password" value="" placeholder="password">
+      <br/>
+      <button type="submit" value="submit">Submit</button>
     </form>
   </body>
 </html>
